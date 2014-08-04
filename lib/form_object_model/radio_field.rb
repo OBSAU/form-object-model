@@ -30,7 +30,7 @@ module FormObjectModel
     end
 
     def label_ids_for(value)
-      page.all("label:contains('#{value}')").map {|label| label['for'] }
+      page.all("label", :text => value).map {|label| label['for'] }
     end
   end
 end
