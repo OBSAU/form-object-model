@@ -11,7 +11,7 @@ module FormObjectModel
 
     def has_value?(value)
       button = button_for(value)
-      button && %w(checked true).include?(button['checked'])
+      button && button.checked?
     end
 
     def value
